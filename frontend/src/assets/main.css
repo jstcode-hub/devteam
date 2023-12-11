@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @import "./base.css";
+=======
+@import './base.css';
+>>>>>>> cb39ece026e881ef9a29ef78dcb8895b29946ce8
 
 @tailwind base;
 @tailwind components;
