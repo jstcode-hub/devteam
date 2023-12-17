@@ -1,6 +1,6 @@
-import ResponseError from '../error/response-error.js';
+import { ResponseError } from '../error/response-error.js';
 
-export const validate = (schema, request) => {
+const validate = (schema, request) => {
   const result = schema.validate(request, {
     abortEarly: false,
     allowUnknown: false,
@@ -11,3 +11,5 @@ export const validate = (schema, request) => {
     return result.value;
   }
 };
+
+export { validate };

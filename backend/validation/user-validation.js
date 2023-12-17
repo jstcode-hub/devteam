@@ -1,7 +1,14 @@
-import joi from 'joi';
+import Joi from 'joi';
 
-export const signupUserValidation = joi.object({
-  email: joi.string().email().required(),
-  password: joi.string().min(6).required(),
-  username: joi.string().min(3).required(),
+const registerUserValidation = Joi.object({
+  email: Joi.string().max(100).required(),
+  password: Joi.string().max(100).required(),
+  username: Joi.string().max(100).required(),
 });
+
+const loginUserValidation = Joi.object({
+  email: Joi.string().max(100).required(),
+  password: Joi.string().max(100).required(),
+});
+
+export { registerUserValidation, loginUserValidation };
